@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- Swiper CSS -->
+    <title>Simple Page Loading Animation With GSAP</title>
+</head>
+
+<body>
+    <!-- Loading Panels -->
+    <ul class="panels">
+        <li class="panel"></li>
+        <li class="panel"></li>
+        <li class="panel"></li>
+        <li class="panel"></li>
+        <li class="panel"></li>
+        <li class="panel"></li>
+    </ul>
+
+    <!-- Swiper Container for Vertical Coverflow Effect -->
+    <div class="swiper-container swiper-container-vertical">
+        <div class="swiper-wrapper">
+            <!-- Home Section Slide -->
+            <div class="swiper-slide h-full" id="Home">
+                <header class="page-header">
+                    <nav class="w-full">
+                        <ul class="flex">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#characters">Characters</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <main class="page-main bg-lore">
+                    <div class="flex flex-col">
+                        <a href="/" class="hover-enlarge">Lore Olympus Webtoon: Jaw Dropping Seen on Media</a>
+                        <button class="cta--button">Read More</button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- About Section Slide -->
+            <div class="swiper-slide" id="about">
+                <h2>About Lore Olympus</h2>
+                <div class="scroll-container">
+                    <div class="scroll-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+                            interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+                    </div>
+                    <div class="scroll-content">
+                        <p>Nulla fermentum tortor at lacus aliquam, ut ultrices lacus varius. Praesent vel dui a arcu
+                            gravida
+                            viverra ut ac lorem.</p>
+                    </div>
+                    <div class="scroll-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
