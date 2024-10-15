@@ -31,8 +31,8 @@
                     <nav class="w-full">
                         <ul class="flex">
                             <li class="active"><a href="/">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#characters">Characters</a></li>
+                            <li>About</li>
+                            <li>Characters</li>
                         </ul>
                     </nav>
                 </header>
@@ -40,29 +40,57 @@
                 <main class="page-main bg-lore">
                     <div class="flex flex-col">
                         <a href="/" class="hover-enlarge">Lore Olympus Webtoon: Jaw Dropping Seen on Media</a>
-                        <button class="cta--button">Read More</button>
+                        <button class="cta--button">Read more below &#8595;</button>
                     </div>
                 </main>
             </div>
 
             <!-- About Section Slide -->
             <div class="swiper-slide" id="about">
-                <h2>About Lore Olympus</h2>
-                <div class="scroll-container">
-                    <div class="scroll-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-                            interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+                <div class="about-content flex">
+                    <!-- Left Image -->
+                    <div class="about-image flex w40 h-full">
+                        <img id="main-image" src="./LoreOlympus.png" alt="About Webtoons" />
+                        <div class="small-images">
+                            <img class="small-img" src="./Hades.webp" alt="Image 1" data-title="Hades"
+                                data-description="In the Lore Olympus webtoon, Hades, the God of the underworld, takes center stage. Often depicted as a handsome blue man in a business suit, Hades runs the Underworld Corporation, serves as the older brother of Zeus and Poseidon, and plays a role in the Six Traitor Dynasty. His character takes on the burden of leadership and pursuing personal interests."
+                                data-large-image="large-image1.jpg" />
+                            <img class="small-img" src="./Persephone.webp" alt="Image 2" data-title="Persephone"
+                                data-description="Persephone, the goddess of spring, is the story’s heroine alongside the underworld. Initially portrayed as an innocent and naive young woman, her character develops dramatically as she faces more challenges.
+
+                                Persephone is depicted with pink skin and a generous heart, a stark contrast to the harsh reality of Olympus. Her journey included discovering her strength, and she dealt with the trauma of being raped by Apollo, as well as her strong feelings about the underworld."
+                                data-large-image="large-image2.jpg" />
+                            <img class="small-img" src="./Zeus.webp" alt="Image 3" data-title="Zeus"
+                                data-description="Zeus, the king of the gods, is depicted as a yellow-skinned man with long, straight hair. Known for his promiscuity and egotism, Zeus’ actions often brought chaos to Olympus. A member of the Six Realms of Lies, he has intimate relationships with many characters, including his brothers Hades and Poseidon, and many lovers. His character provides a lens through which to examine issues of power and corruption."
+                                data-large-image="large-image3.jpg" />
+                        </div>
                     </div>
-                    <div class="scroll-content">
-                        <p>Nulla fermentum tortor at lacus aliquam, ut ultrices lacus varius. Praesent vel dui a arcu
-                            gravida
-                            viverra ut ac lorem.</p>
+                    <!-- Right Content -->
+                    <div class="about-text w60 h-full">
+                        <h2 id="about-title">About Lore Olympus</h2>
+                        <p id="description">
+                        </p>
                     </div>
-                    <div class="scroll-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna aliqua.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide" id="carousel">
+                <div class="swiper-container carousel">
+                    <h1 class="text-center">Top 5 Manhwas</h1>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./Manhwa1.jpg" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="./Manhwa2.jpg" alt="Image 2"></div>
+                        <div class="swiper-slide"><img src="./Manhwa3.jpg" alt="Image 3"></div>
+                        <div class="swiper-slide"><img src="./Manhwa4.jpg" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./Manhwa5.jpg" alt="Image 5"></div>
                     </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
