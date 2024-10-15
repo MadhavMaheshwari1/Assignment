@@ -472,12 +472,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .Carousel img {
-  width: 100%; /* Make the images responsive */
-  height: 100%;
+  width: 100% !important; /* Make the images responsive */
+  height: 100% !important;
   object-fit: cover;
   border-radius: 20px; /* Optional: add some styling */
   cursor: pointer;
