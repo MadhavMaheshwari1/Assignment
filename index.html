@@ -6,92 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/assets/Styles/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Assignment</title>
 </head>
 
 <body>
-    <ul class="panels">
-        <li class="panel"></li>
-        <li class="panel"></li>
-        <li class="panel"></li>
-        <li class="panel"></li>
-        <li class="panel"></li>
-        <li class="panel"></li>
+    <ul class="panels" role="presentation">
+        <li class="panel" tabindex="-1"></li>
+        <li class="panel" tabindex="-1"></li>
+        <li class="panel" tabindex="-1"></li>
+        <li class="panel" tabindex="-1"></li>
+        <li class="panel" tabindex="-1"></li>
+        <li class="panel" tabindex="-1"></li>
     </ul>
-    <div class="swiper-container swiper-container-vertical">
+    <div class="swiper-container swiper-container-vertical" aria-label="Main content">
         <div class="swiper-wrapper">
-            <div class="swiper-slide h-full" id="Home">
+            <div class="swiper-slide h-full" id="Home" role="region" aria-labelledby="home-title">
                 <header class="page-header">
-                    <nav class="w-full">
+                    <nav class="w-full" aria-label="Main Navigation">
                         <ul class="flex justify-between">
                             <div>
-                                <h1 class="ml-2 brandName">Toon Sphere</h1>
+                                <h1 class="ml-2 brandName" id="home-title">Toon Sphere</h1>
                             </div>
-                            <div class="menuIcon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-                            <div class="overlay" onclick="toggleMenu()"></div>
+                            <div class="menuIcon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle menu">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="overlay" onclick="toggleMenu()" aria-hidden="true"></div>
                             <div class="nav-links flex">
-                                <div class="closeIcon" onclick="toggleMenu()"><i class="fas fa-times"></i></div>
-                                <li class="active"><a href="/">Home</a></li>
-                                <li>About</li>
-                                <li>Characters</li>
+                                <div class="closeIcon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Close menu">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <li class="active"><a href="/" role="link">Home</a></li>
+                                <li><a href="#about" role="link">About</a></li>
+                                <li><a href="#carousel" role="link">Characters</a></li>
                             </div>
                         </ul>
                     </nav>
                 </header>
                 <main class="page-main bg-lore">
-                    <div class="flex flex-col"><a href="/" class="hover-enlarge">Lore Olympus Webtoon: Jaw Dropping Seen
-                            on Media</a><button class="cta--button">Read more below &#8595;</button></div>
+                    <div class="flex flex-col">
+                        <a href="/" class="hover-enlarge">Lore Olympus Webtoon: Jaw Dropping Seen on Media</a>
+                        <button class="cta--button" role="button" tabindex="0">Read more below &#8595;</button>
+                    </div>
                 </main>
             </div>
-            <div class="swiper-slide" id="about">
+            <div class="swiper-slide" id="about" role="region" aria-labelledby="about-title">
                 <div class="about-content">
-                    <div class="about-image flex w40 h-full"><img id="main-image" src="./LoreOlympus.png"
-                            alt="About Webtoons" loading="lazy" />
-                        <div class="small-images"><img class="small-img" src="./Hades.webp" loading="lazy" alt="Image 1"
-                                data-title="Hades"
-                                data-description="In the Lore Olympus webtoon, Hades, the God of the underworld, takes center stage. Often depicted as a handsome blue man in a business suit, Hades runs the Underworld Corporation, serves as the older brother of Zeus and Poseidon, and plays a role in the Six Traitor Dynasty. His character takes on the burden of leadership and pursuing personal interests."
-                                data-large-image="large-image1.jpg" /><img class="small-img" src="./Persephone.webp"
-                                loading="lazy" alt="Image 2" data-title="Persephone"
-                                data-description="Persephone, the goddess of spring, is the story’s heroine alongside the underworld. Initially portrayed as an innocent and naive young woman, her character develops dramatically as she faces more challenges. Persephone is depicted with pink skin and a generous heart, a stark contrast to the harsh reality of Olympus. Her journey included discovering her strength, and she dealt with the trauma of being raped by Apollo, as well as her strong feelings about the underworld."
-                                data-large-image="large-image2.jpg" /><img class="small-img" src="./Zeus.webp"
-                                loading="lazy" alt="Image 3" data-title="Zeus"
-                                data-description="Zeus, the king of the gods, is depicted as a yellow-skinned man with long, straight hair. Known for his promiscuity and egotism, Zeus’ actions often brought chaos to Olympus. A member of the Six Realms of Lies, he has intimate relationships with many characters, including his brothers Hades and Poseidon, and many lovers. His character provides a lens through which to examine issues of power and corruption."
-                                data-large-image="large-image3.jpg" /></div>
+                    <div class="about-image flex w40 h-full">
+                        <img id="main-image" src="./LoreOlympus.png" alt="About Webtoons" loading="lazy" />
+                        <div class="small-images">
+                            <img class="small-img" src="./Hades.webp" loading="lazy" alt="Hades" />
+                            <img class="small-img" src="./Persephone.webp" loading="lazy" alt="Persephone" />
+                            <img class="small-img" src="./Zeus.webp" loading="lazy" alt="Zeus" />
+                        </div>
                     </div>
                     <div class="about-text w60 h-full">
                         <div class="curved-underline">
-                            <h1 id="about-title" class="title">About Lore Olympus</h1><svg class="underline"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50">
+                            <h1 id="about-title" class="title">About Lore Olympus</h1>
+                            <svg class="underline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50">
                                 <path d="M0,40 Q250,0 500,40" stroke-width="6" fill="none" />
                             </svg>
                         </div>
                         <p id="description" class="text-center"></p>
                         <div class="curved-underline">
-                            <h2>Main Characters</h2><svg class="underline" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 500 50">
+                            <h2>Main Characters</h2>
+                            <svg class="underline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50">
                                 <path d="M0,40 Q250,0 500,40" stroke-width="6" fill="none" />
                             </svg>
                         </div>
-                        <div class="flex"><img id="main-about-image" src="./LoreOlympus.png" alt="About Webtoons"
-                                loading="lazy" /><img class="small-img" src="./Hades.webp" alt="Image 1"
-                                data-title="Hades" loading="lazy"
-                                data-description="In the Lore Olympus webtoon, Hades, the God of the underworld, takes center stage. Often depicted as a handsome blue man in a business suit, Hades runs the Underworld Corporation, serves as the older brother of Zeus and Poseidon, and plays a role in the Six Traitor Dynasty. His character takes on the burden of leadership and pursuing personal interests."
-                                data-large-image="large-image1.jpg" /><img class="small-img" src="./Persephone.webp"
-                                alt="Image 2" data-title="Persephone" loading="lazy"
-                                data-description="Persephone, the goddess of spring, is the story’s heroine alongside the underworld. Initially portrayed as an innocent and naive young woman, her character develops dramatically as she faces more challenges. Persephone is depicted with pink skin and a generous heart, a stark contrast to the harsh reality of Olympus. Her journey included discovering her strength, and she dealt with the trauma of being raped by Apollo, as well as her strong feelings about the underworld."
-                                data-large-image="large-image2.jpg" /><img class="small-img" src="./Zeus.webp"
-                                alt="Image 3" data-title="Zeus" loading="lazy"
-                                data-description="Zeus, the king of the gods, is depicted as a yellow-skinned man with long, straight hair. Known for his promiscuity and egotism, Zeus’ actions often brought chaos to Olympus. A member of the Six Realms of Lies, he has intimate relationships with many characters, including his brothers Hades and Poseidon, and many lovers. His character provides a lens through which to examine issues of power and corruption."
-                                data-large-image="large-image3.jpg" /></div>
+                        <div class="flex">
+                            <img id="main-about-image" src="./LoreOlympus.png" alt="About Webtoons" loading="lazy" />
+                            <img class="small-img" src="./Hades.webp" alt="Hades" loading="lazy" />
+                            <img class="small-img" src="./Persephone.webp" alt="Persephone" loading="lazy" />
+                            <img class="small-img" src="./Zeus.webp" alt="Zeus" loading="lazy" />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" id="carousel">
+            <div class="swiper-slide" id="carousel" role="region" aria-labelledby="carousel-title">
+                <h1 id="carousel-title" class="text-center">Top 5 Manhwas</h1>
                 <div class="swiper-container carousel">
-                    <h1 class="text-center">Top 5 Manhwas</h1>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="./Manhwa1.jpg" alt="Image 1" loading="lazy"></div>
                         <div class="swiper-slide"><img src="./Manhwa2.jpg" alt="Image 2" loading="lazy"></div>
@@ -100,8 +96,8 @@
                         <div class="swiper-slide"><img src="./Manhwa5.jpg" alt="Image 5" loading="lazy"></div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next slide"></div>
+                    <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous slide"></div>
                 </div>
             </div>
         </div>
@@ -109,7 +105,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="dist/bundle.js" defer></script>
+
 </body>
 
 </html>
