@@ -101,6 +101,7 @@ body {
 
 .brandName {
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .page-header ul li {
@@ -188,12 +189,14 @@ body {
 }
 
 .hover-enlarge {
+  cursor: pointer;
   font-size: 3rem;
   transition: transform 0.5s ease-in-out; /* Smooth transition for the scaling effect */
   display: inline-block; /* Make the anchor tag respect the scale transformation */
 }
 
 .hover-enlarge:hover {
+  cursor: pointer;
   transform: scale(1.2);
 }
 
@@ -201,18 +204,23 @@ body {
   .panels {
     width: 200vw;
   }
-  .about-content {
-    display: flex;
-    flex-direction: column;
-  }
   .about-image > img {
-    width: 100%;
+    display: none;
   }
   .brandName {
     font-size: 1.75rem;
   }
   .about-text {
     width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .about-image {
+    display: none;
+  }
+  .about-text {
+    width: 98vw;
   }
 }
 
@@ -353,7 +361,27 @@ body {
   z-index: 1;
 }
 
+.curved-underline {
+  position: relative;
+  text-align: center; /* Center the title */
+  margin: 20px 0; /* Margin around the section */
+  padding-bottom: 20px; /* Add padding to give space for the SVG */
+}
+
+.underline {
+  width: 30%; /* Make the SVG responsive */
+  position: absolute;
+  bottom: 0; /* Position it under the text */
+  left: 50%; /* Center it */
+  transform: translateX(-50%); /* Adjust position to center */
+}
+
+.underline path {
+  stroke: #00d9ff; /* Use a solid color to test visibility */
+}
+
 .small-img {
+  border-radius: 8px;
   width: 100px; /* Small image width */
   height: 100px; /* Small image height */
   cursor: pointer; /* Change cursor on hover */
@@ -373,6 +401,18 @@ body {
 #main-image {
   width: 100%; /* Adjust as necessary */
   height: auto; /* Maintain aspect ratio */
+}
+
+#main-about-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#main-about-image {
+  border: 2px solid #007bff; /* Change border color on hover */
+  transform: scale(1.05); /* Scale up on hover */
 }
 
 .small-images {
