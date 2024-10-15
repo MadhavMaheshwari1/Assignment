@@ -243,6 +243,13 @@ body {
   z-index: -1; /* Ensure overlay is above everything else */
 }
 
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    padding: 30px;
+    gap: 2rem;
+  }
+
 @media screen and (max-width: 600px) {
   .hover-enlarge {
     font-size: 2rem;
@@ -253,6 +260,9 @@ body {
   .cta--button {
     padding: 8px 10px;
     font-size: 0.5rem;
+  }
+  .about-content {
+    padding: 0px;
   }
   .panels {
     width: 235vw;
@@ -324,13 +334,6 @@ body {
   justify-content: center;
   height: 100vh; /* Full viewport height */
   background: var(--darkblue); /* Background color for each slide */
-}
-
-.about-content {
-  display: flex;
-  align-items: flex-start; /* Align items at the top */
-  padding: 30px;
-  gap: 2rem;
 }
 
 .about-image img {
