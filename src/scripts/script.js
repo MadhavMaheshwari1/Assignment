@@ -1,4 +1,4 @@
-// import '../assets/Styles/s';
+import '../assets/Styles/styles.css';
 
 const tl = gsap.timeline({ paused: true });
 
