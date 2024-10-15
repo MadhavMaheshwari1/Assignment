@@ -23,6 +23,10 @@
   margin-bottom: 20px;
 }
 
+.mt-20{
+  margin-top: 20px;
+}
+
 .w60 {
   width: 60%;
 }
@@ -457,11 +461,40 @@ body {
   cursor: pointer; /* Change cursor to pointer for clickable images */
 }
 
+/* Carousel Container */
+
 #carousel {
   width: 100%;
-  padding-inline: 50px;
+  padding-inline: 10px; /* Reduce padding for smaller screens */
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .carousel img {
-  height: 80vh;
+  width: 100%; /* Make the images responsive */
+  height:100%;
+  object-fit: cover;
+  border-radius: 20px; /* Optional: add some styling */
+  cursor: pointer;
+}
+
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper styles for pagination and navigation buttons */
+.swiper-pagination {
+  bottom: 10px; /* Adjust bottom position */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Change button color for visibility */
 }

@@ -21,6 +21,7 @@
         <li class="panel" tabindex="-1"></li>
         <li class="panel" tabindex="-1"></li>
     </ul>
+    
     <div class="swiper-container swiper-container-vertical" aria-label="Main content">
         <div class="swiper-wrapper">
             <div class="swiper-slide h-full" id="Home" role="region" aria-labelledby="home-title">
@@ -52,6 +53,7 @@
                     </div>
                 </main>
             </div>
+
             <div class="swiper-slide" id="about" role="region" aria-labelledby="about-title">
                 <div class="about-content">
                     <div class="about-image flex w40 h-full">
@@ -85,28 +87,44 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" id="carousel" role="region" aria-labelledby="carousel-title">
-                <h1 id="carousel-title" class="text-center">Top 5 Manhwas</h1>
+
+            <!-- Carousel Slide -->
+            <div class="swiper-slide flex flex-col" id="carousel" role="region" aria-labelledby="carousel-title">
+                <h1 id="carousel-title" class="text-center mt-20">Top 5 Manhwas</h1>
                 <div class="swiper-container carousel">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./Manhwa1.jpg" alt="Image 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="./Manhwa2.jpg" alt="Image 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="./Manhwa3.jpg" alt="Image 3" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="./Manhwa4.jpg" alt="Image 4" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="./Manhwa5.jpg" alt="Image 5" loading="lazy"></div>
+                        <div class="swiper-slide">
+                            <img src="/src/assets/Images/Manhwa1.jpg" alt="Image 1" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/assets/Images/Manhwa2.jpg" alt="Image 2" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/assets/Images/Manhwa3.jpg" alt="Image 3" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/assets/Images/Manhwa4.jpg" alt="Image 4" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/assets/Images/Manhwa5.jpg" alt="Image 5" loading="lazy">
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next slide"></div>
                     <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous slide"></div>
                 </div>
             </div>
+
         </div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="dist/bundle.js" defer></script>
-
 </body>
 
 </html>

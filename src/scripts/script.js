@@ -129,19 +129,29 @@ document.querySelectorAll(".small-img").forEach((img) => {
   });
 });
 
-const swiper = new Swiper(".carousel", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
+var mySwiper = new Swiper(".swiper-container", {
+  speed: 500,
+  spaceBetween: 100,
+  initialSlide: 0,
+  autoHeight: false, // true if you want the wrapper to adopt the height of the active slide
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 5000, // delay between transitions in ms
+    stopOnLastSlide: false, // true if you want to stop autoplay on the last slide
   },
-  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+  pagination: false, // Set pagination to false to remove dots
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  effect: "slide",
+  spaceBetween: 60,
+  slidesPerView: 1,
+  centeredSlides: true,
+  slidesOffsetBefore: 0,
+  grabCursor: true,
 });
 
 // Toggle menu navigation
