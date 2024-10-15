@@ -193,3 +193,34 @@ const swiper = new Swiper(".carousel", {
     prevEl: ".swiper-button-prev", // Previous button
   },
 });
+
+// Toogle menu navigation
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.overlay');
+    const menuIcon = document.querySelector('.menuIcon');
+
+    const isActive = navLinks.classList.contains('active');
+
+    if (isActive) {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        menuIcon.classList.remove('active');
+    } else {
+        navLinks.classList.add('active');
+        overlay.classList.add('active');
+        menuIcon.classList.add('active');
+    }
+}
+
+// Close the menu when clicking outside of it using the overlay
+document.querySelector('.overlay').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.overlay');
+    const menuIcon = document.querySelector('.menuIcon');
+
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    menuIcon.classList.remove('active');
+});
+

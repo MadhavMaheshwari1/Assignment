@@ -19,9 +19,9 @@
   width: 40%;
 }
 
-.text-center{
-    text-align: center;
-    margin-bottom: 20px;
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .w60 {
@@ -35,10 +35,12 @@ ul {
 li {
   cursor: pointer;
 }
+
 li:hover {
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -63,8 +65,16 @@ body {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Changed to flex-end for proper alignment */
+  justify-content: center;
   gap: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .flex-col {
@@ -81,12 +91,16 @@ body {
 }
 
 /* MAIN STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-header {
   position: fixed;
   top: 30px;
   width: 100%;
   z-index: 1;
+}
+
+.brandName {
+  font-size: 3rem;
 }
 
 .page-header ul li {
@@ -154,7 +168,7 @@ body {
 }
 
 .bg-lore {
-  background-color: #8f8f8f;
+  background-color: #959595;
   background-image: url("/Lore.png"); /* URL of the background image */
   background-size: cover;
   background-repeat: no-repeat;
@@ -194,9 +208,31 @@ body {
   .about-image > img {
     width: 100%;
   }
+  .brandName {
+    font-size: 1.75rem;
+  }
   .about-text {
     width: 100%;
   }
+}
+
+/* Default state for larger screens */
+.menuIcon {
+  display: none;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.overlay {
+  position: fixed; /* Fix overlay position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(188, 188, 188, 0.1); /* Semi-transparent background */
+  z-index: -1; /* Ensure overlay is above everything else */
 }
 
 @media screen and (max-width: 600px) {
@@ -212,6 +248,44 @@ body {
   }
   .panels {
     width: 235vw;
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav links */
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    background-color: var(--darkblue);
+    flex-direction: column;
+    align-items: flex-center; /* Change 'flex-center' to 'flex-start' */
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure nav links are above the overlay */
+  }
+
+  .nav-links li {
+    border: 2px solid white;
+    padding: 10px; /* Add some padding for better touch target */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+
+  .closeIcon {
+    display: flex;
+    cursor: pointer;
+    font-size: 1.5rem; /* Close icon size */
+    align-self: center; /* Align close icon to the end */
+    margin-bottom: 10px; /* Space below the close icon */
   }
 }
 
@@ -337,19 +411,9 @@ body {
   cursor: pointer; /* Change cursor to pointer for clickable images */
 }
 
-/* Carousel Section */
-/* 
-.swiper-slide {
+#carousel {
   width: 100%;
-}
-.swiper-slide img {
-  height: 80vh;
-  } */
-
-#carousel{
-    width: 100%;
-    padding-inline: 50px;
-    padding-block:50px;
+  padding-inline: 50px;
 }
 
 .carousel img {

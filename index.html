@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- Swiper CSS -->
-    <title>Simple Page Loading Animation With GSAP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Assignment</title>
 </head>
 
 <body>
@@ -29,10 +30,23 @@
             <div class="swiper-slide h-full" id="Home">
                 <header class="page-header">
                     <nav class="w-full">
-                        <ul class="flex">
-                            <li class="active"><a href="/">Home</a></li>
-                            <li>About</li>
-                            <li>Characters</li>
+                        <ul class="flex justify-between">
+                            <div>
+                                <h1 class="ml-2 brandName">Toon Sphere</h1>
+                            </div>
+                            <div class="menuIcon" onclick="toggleMenu()">
+                                <i class="fas fa-bars"></i> <!-- Menu icon -->
+                            </div>
+                            <!-- Overlay for detecting outside clicks -->
+                            <div class="overlay" onclick="toggleMenu()"></div>
+                            <div class="nav-links flex">
+                                <div class="closeIcon" onclick="toggleMenu()">
+                                    <i class="fas fa-times"></i> <!-- Close (cross) icon inside nav-links -->
+                                </div>
+                                <li class="active"><a href="/">Home</a></li>
+                                <li>About</li>
+                                <li>Characters</li>
+                            </div>
                         </ul>
                     </nav>
                 </header>
