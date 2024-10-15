@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/scripts/script.js', // Entry point for your application
     output: {
         filename: 'bundle.js', // Output bundle filename
-        path: path.resolve(__dirname, 'public'), // Output directory
+        path: path.resolve(__dirname, 'dist'), // Output directory
         clean: true, // Clean the output directory before each build
     },
     module: {
